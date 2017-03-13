@@ -1,0 +1,7 @@
+Shooting Storm
+
+Control:
+
+This game will comtrol by using a W, A, S, D to move a actor and use a spacebar to fire and use R to fire rocket.
+
+Difficulty will depend on player score. If player score is high it will more difficulty and has a lot of enemy.
