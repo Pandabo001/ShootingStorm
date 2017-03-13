@@ -1,5 +1,9 @@
 Shooting Storm
 
+Objective:
+
+This game objective is survive and destroy a enemy and get high score. This game can challenge another people by play and see other people score. 
+
 Control:
 
 This game will comtrol by using a W, A, S, D to move a actor and use a spacebar to fire and use R to fire rocket.
