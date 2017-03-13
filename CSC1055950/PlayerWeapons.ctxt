@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PlayerWeapons
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlayerWeapons\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ PlayerWeapons\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ move()
+comment2.text=\r\n\ Make\ the\ player\ weapon\ move\ in\ x\ and\ y\ coordinate.\r\n
+comment3.params=World
+comment3.target=void\ addedToWorld(greenfoot.World)
+comment3.text=\r\n\ \r\n
+numComments=4
