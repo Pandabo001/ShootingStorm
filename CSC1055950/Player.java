@@ -112,17 +112,17 @@ public class Player extends Actor
             if(firingCycle >= firingRate){
                 //sid = Greenfoot.getRandomNumber(100);
                 for(int i = 0; i < fireLevel; i++){
-                    Greenfoot.playSound("Laser_Shoot1.wav");
+                    Greenfoot.playSound("Gun+1.wav");
                     myworld.addObject(new PlayerBullet(), x, y + (int)((i + 0.5) * 6 - fireLevel * 3));
                 }
                 firingCycle = 0;
             }
         }
         
-        if(Greenfoot.isKeyDown("r")){
+        if(Greenfoot.isKeyDown("z")){
             if(rocketCycle >= rocketRate && rockets > 0){
                 rockets--;
-                Greenfoot.playSound("howitzer_cannon_single_shot.mp3");
+                Greenfoot.playSound("Missile+2.wav");
                 myworld.addObject(new Rocket(), (int)x, (int)y);
                 rocketCycle = 0;
             }
