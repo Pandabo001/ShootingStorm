@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MainMenu extends Menu
 {
 
-    //GreenfootSound music = new GreenfootSound("danger_zone.mp3");
+    GreenfootSound music = new GreenfootSound("08 - Theme Of Soldier (Instrumental)-(MyMp3Singer.net).MP3");
     boolean Playing = true;
     public boolean end = false;
     
@@ -27,7 +27,7 @@ public class MainMenu extends Menu
         addObject(new HelpButton(), 125, 300);
     }
     
-    /*public void act(){
+    public void act(){
         if(Playing)
         {
             music.playLoop();
@@ -43,5 +43,5 @@ public class MainMenu extends Menu
     
     public void stopped(){
         music.stop();
-    }*/
+    }
 }
