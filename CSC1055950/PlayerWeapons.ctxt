@@ -9,5 +9,5 @@ comment2.target=void\ move()
 comment2.text=\r\n\ Make\ the\ player\ weapon\ move\ in\ x\ and\ y\ coordinate.\r\n
 comment3.params=World
 comment3.target=void\ addedToWorld(greenfoot.World)
-comment3.text=\r\n\ \r\n
+comment3.text=\r\n\ \r\n\ add\ to\ the\ world\ when\ player\ fire.\r\n
 numComments=4
