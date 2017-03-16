@@ -24,7 +24,7 @@ public class Enemy extends Actor
     public void act() 
     {
         getDamaged();
-        getDestroyed();
+        Destroyed();
     }    
     
     public void addedToWorld(World World){
@@ -34,7 +34,7 @@ public class Enemy extends Actor
     /*
      * if the enemy ship is destroy update score and spawn power up object to the world.
      */
-    public void getDestroyed(){
+    public void Destroyed(){
         if(hp <= 0){
             myworld.score += score;
             myworld.addObject(new Explosion(0, 40), getX(), getY());
@@ -56,7 +56,7 @@ public class Enemy extends Actor
         }
     }
     
-    public void animate(){
+    public void animated(){
         animCycle ++;
         if(animCycle >= image.length * animSpeed){
             animCycle = 0;
