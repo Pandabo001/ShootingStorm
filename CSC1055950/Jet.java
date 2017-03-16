@@ -18,11 +18,11 @@ public class Jet extends Enemy
      */
     public void act() 
     {
-        animate();
+        animated();
         move();
         fire();
         getDamaged();
-        getDestroyed();
+        Destroyed();
     }    
     
     public void fire(){
@@ -31,7 +31,7 @@ public class Jet extends Enemy
             EnemyBullet bullet = new EnemyBullet();
             bullet.setRotation(getRotation());
             myworld.addObject(bullet, getX(), getY());
-            Greenfoot.playSound("Laser_Shoot7.wav");
+            Greenfoot.playSound("Gun+Silencer.wav");
             firingCycle = 0;
         }
     }
