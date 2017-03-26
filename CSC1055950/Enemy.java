@@ -37,6 +37,7 @@ public class Enemy extends Actor
     public void Destroyed(){
         if(hp <= 0){
             myworld.score += score;
+            spawnItem();
             myworld.addObject(new Explosion(0, 40), getX(), getY());
             Greenfoot.playSound("explosion.mp3");
             myworld.removeObject(this);
@@ -54,6 +55,32 @@ public class Enemy extends Actor
             }
             myworld.removeObject(a);
         }
+    }
+    
+    /*
+     * Randomly spawn power up objects.
+     */
+    public void spawnItem(){
+        if(Greenfoot.getRandomNumber(100) < dropPercentage){
+                int item = Greenfoot.getRandomNumber(100);
+                if(item < 20){
+                    myworld.addObject(new Repair(), getX(), getY());
+                }else if(item < 40){
+                    myworld.addObject(new RocketUp(), getX(), getY());
+                }else if(item < 50){
+                    myworld.addObject(new BulletLvlUp(), getX(), getY());
+                }else if(item < 60){
+                    myworld.addObject(new HPUP(), getX(), getY());
+                }else if(item < 70){
+                     myworld.addObject(new FireRate(), getX(), getY());
+                }else if(item < 80){
+                     myworld.addObject(new Speed(), getX(), getY());
+                }else if(item < 90){
+                     myworld.addObject(new Damage(), getX(), getY());
+                }else{
+                    myworld.addObject(new BulletSpeed(), getX(), getY());
+                }
+            }
     }
     
     public void animated(){

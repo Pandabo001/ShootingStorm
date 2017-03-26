@@ -43,6 +43,7 @@ public class Player extends Actor
             damageAnim++;
             animate();
             getDamaged();
+            getItem();
             getDestroyed();
             setLocation(x, y);
         }
@@ -128,6 +129,89 @@ public class Player extends Actor
             }
         }
     }
+    
+    /*
+     * Check that palyer ship get the power up, increase the power in player ship and check max of power up.
+     */
+    public void getItem(){
+        while(getOneIntersectingObject(Repair.class) != null){
+            Repair a = (Repair)getOneIntersectingObject(Repair.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            hp = maxhp;
+        }
+        while(getOneIntersectingObject(RocketUp.class) != null){
+            RocketUp a = (RocketUp)getOneIntersectingObject(RocketUp.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            rockets += 2;
+            if(rockets > 1000){
+                rockets = 1000;
+            }
+        }
+        while(getOneIntersectingObject(BulletLvlUp.class) != null){
+            BulletLvlUp a = (BulletLvlUp)getOneIntersectingObject(BulletLvlUp.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            if(fireLevel < 8){
+                fireLevel++;
+            }
+        }
+        while(getOneIntersectingObject(BulletSpeed.class) != null){
+            BulletSpeed a = (BulletSpeed)getOneIntersectingObject(BulletSpeed.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            if(bulletSpeed < 20){
+                bulletSpeed++;
+            }
+        }
+        while(getOneIntersectingObject(HPUP.class) != null){
+            HPUP a = (HPUP)getOneIntersectingObject(HPUP.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            maxhp += 20;
+            hp += 20;
+            if(maxhp > 1000){
+                maxhp = 1000;
+            }
+            if(hp > 1000){
+                hp = 1000;
+            }
+        }
+        while(getOneIntersectingObject(Damage.class) != null){
+            Damage a = (Damage)getOneIntersectingObject(Damage.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            if(damage < 40){
+                damage += 2;
+            }
+        }
+        while(getOneIntersectingObject(FireRate.class) != null){
+            FireRate a = (FireRate)getOneIntersectingObject(FireRate.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            if(firingRate > 2){
+                firingRate--;
+            }
+        }
+        while(getOneIntersectingObject(Speed.class) != null){
+            Speed a = (Speed)getOneIntersectingObject(Speed.class);
+            Greenfoot.playSound("Beep1.wav");
+            myworld.removeObject(a.anim1);
+            myworld.removeObject(a);
+            if(speed < 8){
+                speed++;
+            }
+        }
+    }
+    
     
     /*
      * Animate the palyer animation.

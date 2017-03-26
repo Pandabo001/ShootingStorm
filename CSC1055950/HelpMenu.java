@@ -17,7 +17,7 @@ public class HelpMenu extends Menu
     public HelpMenu()
     {
         BG.scale(BG.getWidth() * getHeight() / BG.getHeight(), getHeight());
-        GreenfootImage board = new GreenfootImage("help2.png");
+        GreenfootImage board = new GreenfootImage("help.png");
         getFont();
         board.setColor(Color.orange);
         board.setFont(font.deriveFont(20f));
