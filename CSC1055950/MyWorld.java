@@ -35,6 +35,7 @@ public class MyWorld extends World
         ImgCycle.scale(ImgCycle.getWidth() * getHeight() / ImgCycle.getHeight(), getHeight());
         addObject(player, 300, 300);
         addObject(new Interface(), 250, 20);
+        
     }
     
     public void animate(){
@@ -53,9 +54,11 @@ public class MyWorld extends World
      * Spawn the enemy into the World randomly and check the difficulty before spawn enemy ship.
      */
     public void spawn(){
-        
-        if(difficulty * 100 + Greenfoot.getRandomNumber(difficulty * 2500) < spawnLocat){
+       if(difficulty * 100 + Greenfoot.getRandomNumber(difficulty * 2500) < spawnLocat && getObjects(Boss.class).isEmpty()){
             int spawnCount = 0;
+            
+            
+            
             if(Greenfoot.getRandomNumber(100) < 15){
                 
                 spawnCount = spawnLocat / 1000;
@@ -109,15 +112,27 @@ public class MyWorld extends World
                     addObject(new Jet(), 1230 + rows * 50, spawnY + 75);                    
                 }
             }
+            
+            
         }
+    }
+    
+    public void spawnBoss(){
+        
+        int spawnY = 220;
+        
+        addObject(new Boss(), 1230, spawnY);
     }
     
     public void act(){
         
         spawnLocat += difficulty;
         difficulty = 5 + score / 500 + 1;
+        
         animate();
+        
         spawn();
+        
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new PauseMenu(this, score));
         }

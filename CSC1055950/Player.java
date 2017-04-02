@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Player extends Actor
 {
+    GreenfootSound music = new GreenfootSound("08 - Theme Of Soldier (Instrumental)-(MyMp3Singer.net).MP3");
     
     int animCycle = 0;
     int animSpeed = 5;
@@ -38,11 +39,13 @@ public class Player extends Actor
     public void act() 
     {
         if(!destroyed){
+            music.playLoop();
             move();
             fire();
             damageAnim++;
             animate();
             getDamaged();
+            getDamagedFromBoss();
             getItem();
             getDestroyed();
             setLocation(x, y);
@@ -103,6 +106,16 @@ public class Player extends Actor
         }
     }
     
+    public void getDamagedFromBoss(){
+        while(getOneIntersectingObject(BossBullet.class) != null){
+            Actor a = getOneIntersectingObject(BossBullet.class);
+            hp -= BossBullet.damage;
+            myworld.removeObject(a);
+            damageAnim = 0;
+            setImage(imageHit);
+        }
+    }
+    
     /*
      * Check key and get fire to enemy ships.
      */
@@ -113,9 +126,10 @@ public class Player extends Actor
             if(firingCycle >= firingRate){
                 //sid = Greenfoot.getRandomNumber(100);
                 for(int i = 0; i < fireLevel; i++){
-                    Greenfoot.playSound("Gun+1.wav");
+                    
                     myworld.addObject(new PlayerBullet(), x, y + (int)((i + 0.5) * 6 - fireLevel * 3));
                 }
+                Greenfoot.playSound("Gun+1.wav");
                 firingCycle = 0;
             }
         }
@@ -233,11 +247,14 @@ public class Player extends Actor
      * If player ship is destroy set the animation into the world.
      */
     public void getDestroyed(){
+        
+        
         if(hp <= 0){
             myworld.addObject(new ExplosionEnd(), getX(), getY());
             Greenfoot.playSound("explosion.mp3");
             ///((MainMenu)(getWorld())).stopped();
             setImage(new GreenfootImage(1, 1));
+            music.stop();
             destroyed = true;
         }
     }
