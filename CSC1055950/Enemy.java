@@ -61,7 +61,7 @@ public class Enemy extends Actor
      * Randomly spawn power up objects.
      */
     public void spawnItem(){
-        if(Greenfoot.getRandomNumber(100) < dropPercentage){
+        if(Greenfoot.getRandomNumber(50) < dropPercentage){
                 int item = Greenfoot.getRandomNumber(100);
                 if(item < 20){
                     myworld.addObject(new Repair(), getX(), getY());

@@ -20,6 +20,7 @@ public class MyWorld extends World
     int spawnLocat = 0;
     int difficulty = 0;
     public Player player = new Player();
+    private int spawnCounter;
     
     
     
@@ -117,24 +118,36 @@ public class MyWorld extends World
         }
     }
     
-    public void spawnBoss(){
+    /*public void spawnBoss(){
         
         int spawnY = 220;
         
         addObject(new Boss(), 1230, spawnY);
-    }
+    }*/
     
     public void act(){
         
         spawnLocat += difficulty;
         difficulty = 5 + score / 500 + 1;
-        
         animate();
-        
         spawn();
+        if (spawnCounter++ > 2000){ 
         
+            addObject(new Boss(), 967, 311);
+            spawnCounter = 0;
+        }
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new PauseMenu(this, score));
+        }
+        addSand(6);
+    }
+    
+    
+    public void addSand(int m){
+        for(int a = 0 ; a < m ; a++){
+            int x = Greenfoot.getRandomNumber(getWidth());  
+            int y = Greenfoot.getRandomNumber(getHeight());
+            addObject(new Star(), x, y);
         }
     }
     
