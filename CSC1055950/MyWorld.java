@@ -136,10 +136,11 @@ public class MyWorld extends World
             addObject(new Boss(), 967, 311);
             spawnCounter = 0;
         }
+        
         if(Greenfoot.isKeyDown("escape")){
             Greenfoot.setWorld(new PauseMenu(this, score));
         }
-        addSand(6);
+        //addSand(2);
     }
     
     

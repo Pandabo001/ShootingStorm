@@ -35,6 +35,8 @@ public class Boss extends Enemy
         if(hp <= 0){
             myworld.score += score;
             myworld.removeObject(turret);
+            myworld.removeObject(turret2);
+            myworld.removeObject(turret3);
             myworld.addObject(new Explosion(0, 40), getX(), getY());
             myworld.removeObject(this);
         }else if(getX() <= -getImage().getWidth()){

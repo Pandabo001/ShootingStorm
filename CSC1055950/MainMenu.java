@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MainMenu extends Menu
 {
-
     
     
     /**
@@ -23,6 +22,10 @@ public class MainMenu extends Menu
         addObject(new StartButton(), 125, 100);
         addObject(new ScoreBoardsButton(), 125, 200);
         addObject(new HelpButton(), 125, 300);
+    }
+    
+    public void act(){
+        
     }
     
     

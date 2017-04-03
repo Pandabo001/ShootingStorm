@@ -29,6 +29,7 @@ public class Player extends Actor
     int sid = Greenfoot.getRandomNumber(100);
     boolean destroyed = false;
     private MyWorld myworld;
+    private MainMenu main;
     GreenfootImage imageHit = new GreenfootImage("playerhit.png");
     GreenfootImage[] image = {new GreenfootImage("player1.png"), new GreenfootImage("player2.png")};
     
@@ -249,12 +250,14 @@ public class Player extends Actor
     public void getDestroyed(){
         
         
+        
         if(hp <= 0){
             myworld.addObject(new ExplosionEnd(), getX(), getY());
             Greenfoot.playSound("explosion.mp3");
             ///((MainMenu)(getWorld())).stopped();
             setImage(new GreenfootImage(1, 1));
             music.stop();
+            //main.stopped();
             destroyed = true;
         }
     }

@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun Apr 02 22:39:03 ICT 2017
+#Mon Apr 03 17:28:42 ICT 2017
 target24.type=ClassTarget
 target16.name=Enemy
 class.Explosion.image=explosion1.png
@@ -50,7 +50,7 @@ dependency60.type=UsesDependency
 target14.showInterface=false
 dependency68.to=HPUP
 target32.width=90
-mainWindow.width=1382
+mainWindow.width=1378
 target8.showInterface=false
 target1.typeParameters=
 target1.type=ClassTarget
@@ -488,7 +488,7 @@ target27.y=610
 target27.x=10
 target34.typeParameters=
 dependency58.to=BulletLvlUp
-editor.swing.0.width=697
+editor.swing.0.width=696
 target29.height=50
 dependency6.from=MyWorld
 class.PlayerBullet.superclass=PlayerWeapons
