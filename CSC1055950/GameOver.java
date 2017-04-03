@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 import java.io.*;
 import java.util.Date;
 import java.text.SimpleDateFormat;
@@ -24,7 +24,7 @@ public class GameOver extends Menu
         BG.scale(BG.getWidth() * getHeight() / BG.getHeight(), getHeight());
         getFont();
         board.setFont(font.deriveFont(40f));
-        board.setColor(Color.orange);
+        board.setColor(Color.ORANGE);
         board.drawString("GAME OVER", 20, 50);
         board.drawString("SCORE: " + score, 20, 100);
         BG.drawImage(board, 50, 50);

@@ -1,6 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
-import java.awt.Font;
+//import java.awt.Color;
+//import java.awt.Font;
 import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.awt.FontFormatException;
@@ -31,7 +31,8 @@ public class Menu extends World
     }
     
     public void getFont(){
-        font = new Font("Haettenschweiler", 0, 34); 
+        font = new Font("Haettenschweiler", false, false, 34); 
+        
     }
     
 }

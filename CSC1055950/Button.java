@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 
 /**
  * Write a description of class Button here.
@@ -35,10 +35,10 @@ public class Button extends Actor
     
     public void draw(String caption){
         Menu menu = (Menu) getWorld();
-        image.setColor(Color.orange);
+        image.setColor(Color.ORANGE);
         image.setFont(menu.font);
         image.drawString(caption, 14, 37);
-        imageMO.setColor(Color.orange);
+        imageMO.setColor(Color.ORANGE);
         imageMO.setFont(menu.font);
         imageMO.drawString(caption, 14, 37);
         setImage(image);

@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 
 /**
  * Write a description of class HPCount here.
@@ -30,7 +30,7 @@ public class HPCount extends Interface
         count = myworld.player.hp;
         counter.clear();
         counter.setFont(font);
-        counter.setColor(Color.red);
+        counter.setColor(Color.RED);
         counter.drawString("HP " + count, 0, 30);
         setImage(counter);
     }

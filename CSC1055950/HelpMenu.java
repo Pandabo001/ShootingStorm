@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 
 /**
  * Write a description of class HelpMenu here.
@@ -19,7 +19,7 @@ public class HelpMenu extends Menu
         BG.scale(BG.getWidth() * getHeight() / BG.getHeight(), getHeight());
         GreenfootImage board = new GreenfootImage("help.png");
         getFont();
-        board.setColor(Color.orange);
+        board.setColor(Color.ORANGE);
         board.setFont(font.deriveFont(20f));
         board.drawString("CONTROLS", 15, 27);
         board.drawString("Movement : WASD or Arrow Keys\nFire : Spacebar\nFire Rocket : R\nPause : Escape", 15, 57);

@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Font;
+//import java.awt.Font;
 
 /**
  * Write a description of class HUD here.
@@ -32,6 +32,6 @@ public class Interface extends Actor
     }
     
     public Interface(){
-        font = new Font("Haettenschweiler", 0, 26); 
+        font = new Font("Haettenschweiler", false, false, 26);  
     }
 }
