@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 import java.io.*;
 import java.util.List;
 import java.util.ArrayList;
@@ -60,7 +60,7 @@ public class ScoreBoard extends Menu
         BG.scale(BG.getWidth() * getHeight() / BG.getHeight(), getHeight());
         getFont();
         scoreboard.setFont(font.deriveFont(20f));
-        scoreboard.setColor(Color.orange);
+        scoreboard.setColor(Color.ORANGE);
         scoreboard.drawString("PLACE", 15, 27);
         scoreboard.drawString("SCORE", 101, 27);
         scoreboard.drawString("DATE AND TIME", 437, 27);

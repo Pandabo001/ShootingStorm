@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 import java.text.DecimalFormat;
 
 /**
@@ -52,7 +52,7 @@ public class ScoreCount extends Interface
         myworld = (MyWorld) World;
         count = myworld.score;
         counter.clear();
-        counter.setColor(Color.orange);
+        counter.setColor(Color.ORANGE);
         counter.setFont(font);
         counter.drawString("SCORE " + count, 0, 30);
         setImage(counter);

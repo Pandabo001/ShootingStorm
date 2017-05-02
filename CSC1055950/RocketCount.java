@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.awt.Color;
+//import java.awt.Color;
 
 /**
  * Write a description of class RocketCount here.
@@ -30,7 +30,7 @@ public class RocketCount extends Interface
         count = myworld.player.rockets;
         counter.clear();
         counter.setFont(font);
-        counter.setColor(Color.blue);
+        counter.setColor(Color.BLUE);
         counter.drawString("ROCKETS " + count, 0, 30);
         setImage(counter);
     }
