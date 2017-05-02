@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=PowerUp
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PowerUp\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ PowerUp\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ expire()
+comment2.text=\r\n\ Set\ expire\ into\ the\ power\ up\ object\ when\ it\ spawn\ into\ world.\r\n
+comment3.params=World
+comment3.target=void\ addedToWorld(greenfoot.World)
+comment3.text=\r\n\ Add\ the\ objects\ to\ the\ world\ and\ animation.\r\n
+comment4.params=
+comment4.target=void\ animate()
+comment4.text=\r\n\ get\ animation\ to\ object.\r\n
+numComments=5
